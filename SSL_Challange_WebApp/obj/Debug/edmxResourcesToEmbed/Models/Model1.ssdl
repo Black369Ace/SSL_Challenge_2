@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MitchellDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MacAddress">
+    <Key>
+      <PropertyRef Name="MacAddress" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="MacAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="issueDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="studentID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__MacAddress__ID__25869641">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="MacAddress" Type="Self.MacAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MacAddress">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MitchellDatabaseModelStoreContainer">
+    <EntitySet Name="MacAddress" EntityType="Self.MacAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__MacAddress__ID__25869641" Association="Self.FK__MacAddress__ID__25869641">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="MacAddress" EntitySet="MacAddress" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

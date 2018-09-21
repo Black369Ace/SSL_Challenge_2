@@ -1,0 +1,5 @@
+C:\Users\STUDENT\source\repos\SSL_Challenge\SSL_Challenge_Database\bin\Debug\SSL_Challenge_Database.dacpac
+C:\Users\STUDENT\source\repos\SSL_Challenge\SSL_Challenge_Database\bin\Debug\SSL_Challenge_Database.dll
+C:\Users\STUDENT\source\repos\SSL_Challenge\SSL_Challenge_Database\bin\Debug\SSL_Challenge_Database.pdb
+C:\Users\STUDENT\source\repos\SSL_Challenge\SSL_Challenge_Database\obj\Debug\SSL_Challenge_Database.dll
+C:\Users\STUDENT\source\repos\SSL_Challenge\SSL_Challenge_Database\obj\Debug\SSL_Challenge_Database.pdb

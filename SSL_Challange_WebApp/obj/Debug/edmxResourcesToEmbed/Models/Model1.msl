@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MitchellDatabaseModelStoreContainer" CdmEntityContainer="MitchellDatabaseEntities">
+    <EntitySetMapping Name="MacAddresses">
+      <EntityTypeMapping TypeName="MitchellDatabaseModel.MacAddress">
+        <MappingFragment StoreEntitySet="MacAddress">
+          <ScalarProperty Name="MacAddress1" ColumnName="MacAddress" />
+          <ScalarProperty Name="issueDate" ColumnName="issueDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="MitchellDatabaseModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
